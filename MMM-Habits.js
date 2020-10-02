@@ -7,7 +7,7 @@
  * {{LICENSE}} Licensed.
  */
 
-Module.register("MMM-Habit", {
+Module.register("MMM-Habits", {
 	defaults: {
 		updateInterval: 60000,
 		retryDelay: 5000
@@ -122,7 +122,7 @@ Module.register("MMM-Habit", {
 
 	getStyles: function () {
 		return [
-			"MMM-Habit.css",
+			"MMM-Habits.css",
 		];
 	},
 
@@ -143,12 +143,12 @@ Module.register("MMM-Habit", {
 
 		// the data if load
 		// send notification to helper
-		this.sendSocketNotification("MMM-Habit-NOTIFICATION_TEST", data);
+		this.sendSocketNotification("MMM-Habits-NOTIFICATION_TEST", data);
 	},
 
 	// socketNotificationReceived from helper
 	socketNotificationReceived: function (notification, payload) {
-		if(notification === "MMM-Habit-NOTIFICATION_TEST") {
+		if(notification === "MMM-Habits-NOTIFICATION_TEST") {
 			// set dataNotification
 			this.dataNotification = payload;
 			this.updateDom();
