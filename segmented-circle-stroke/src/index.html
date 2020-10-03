@@ -1,0 +1,38 @@
+<div id="wrap">
+	<div id="input-container">
+		<div>
+			<input type="number" id="inFill" min="0" max="10" value="3" novalidate>
+			<label for="inFill">Filled Segments</label>
+		</div><div>
+			<input type="number" id="inTotal" min="0" value="10" novalidate>
+			<label for="inTotal">Total Segments</label>
+		</div><div>
+			<input type="number" id="inOffset" min="0" max="20" value="1" novalidate>
+			<label for="inOffset">Offset</label>
+		</div>
+	</div>
+	<div id="info">
+		<h1>Usage</h1>
+		<pre>
+/*
+var circle = new Segmentor(
+  [element or Id of svg],
+  {
+    totalSegments: [total number of segments],
+    filledSegments: [number of filled segments],
+    offset: [how much space between each segment]
+  }
+);
+*/
+// Ex:
+var circle = new Segmentor('circle', {
+  totalSegments: 3,
+  filledSegments: 10,
+  offset: 1
+});
+		</pre>
+	</div>
+	<div id="svg-container">
+		<svg id="circle" viewBox="0 0 320 320" version="1.1" xmlns="http://www.w3.org/2000/svg"></svg>
+	</div>
+</div>
